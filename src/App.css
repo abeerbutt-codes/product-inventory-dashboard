@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #292750;
+  color: white;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.summary {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.summary p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+.dashboard h1 {
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #74768c;
+  margin-bottom: 30px;
+}
+
+.add-form,
+.search-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.add-form h3 {
+  margin-top: 0;
+}
+
+.add-form input,
+.search-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #dcdfea;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+button {
+  border: none;
+  border-radius: 7px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-form button {
+  background-color: #6558e8;
+  color: white;
+}
+
+.add-form button:hover {
+  background-color: #5144d0;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background-color: white;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #e7e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.product-icon {
+  background-color: #eeecff;
+  width: 65px;
+  height: 65px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.product-card h3 {
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  color: #77798c;
+  font-size: 14px;
+}
+
+.product-card h4 {
+  color: #6558e8;
+  font-size: 20px;
+}
+
+.delete-button {
+  background-color: #ffebeb;
+  color: #d63838;
+  width: 100%;
+}
+
+.delete-button:hover {
+  background-color: #ffdada;
+}
+
+@media (max-width: 800px) {
+  .product-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .summary {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard {
+    padding: 25px 14px;
+  }
+}
